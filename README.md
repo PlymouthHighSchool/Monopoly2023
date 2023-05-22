@@ -2,4 +2,4 @@
 
 Mr. Fogarty
 
-A classwide project to build a classic game.
+A class wide project to build a classic game.
