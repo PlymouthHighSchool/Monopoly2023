@@ -1,7 +1,5 @@
-import java.awt.*;
-import BreezyGUI.*;
 
-public class Player extends GBFrame{
+public class Player{
 	int wallet;
 	int location;
 	String piece;
@@ -9,39 +7,41 @@ public class Player extends GBFrame{
 	int playerNumber;
 	Boolean inJail ;
 	int timeInJail;
-	//these four line are a tester and will be removed:
-	Button conputeButton = addButton ("tester" , 6, 3, 2, 1);
-	public void buttonClicked (Button buttonObj) {
-		System.out.println(calcTax(100));
-	}
+	Property myProperties[] = new Property()[22];
 	
-	/*
 	public int numOfHotels() {
-		return numHotels;
+		int myAmount;
+		for(int count = 0; count < 23; count++ ) {
+			if (myProperties[count] == null) {
+				myAmount = myAmount;
+			}
+			else {
+				myAmount++;
+			}
+		}
+		
+		return  myAmount;
 	}
 	
 	public int numOfHouses() {
-		return numHouses;
+		int myAmount;
+		for(int count = 0; count < 23; count++ ) {
+			if (myProperties[count] == null) {
+				myAmount = myAmount;
+			}
+			else {
+				myAmount++;
+			}
+		}
+		
+		return  myAmount ;
 	}
-	*/
+	
 	public int calcTax(int totalWorth) {
 		totalWorth = (int) (totalWorth * .9);
 		return totalWorth;
 		
 	}
 
-	public Boolean generateFunds(int financialGoal) {
-		if(getWallet() > financialGoal) {
-			
-		}
-		else {
-			return false;
-		}
-	}
-
-	public static void main(String[] args) {
-		Frame frm = new Player();
-		frm.setSize(100, 100);
-		frm.setVisible (true);
-	}
+	
 }
