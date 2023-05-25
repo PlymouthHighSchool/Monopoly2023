@@ -1,9 +1,9 @@
 import java.awt.*;
 
 public class Turn {
-	private int doubleCount, rollNum;
+	private static int doubleCount, rollNum;
 	private static Dice[] dice = new Dice[2];
-	private Player currentPlayer;
+	private static Player currentPlayer;
 	
 	public static Player getPlayerInfo() {
 		return currentPlayer;
