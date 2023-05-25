@@ -5,7 +5,7 @@ public class Taxes extends Space {
 	{
 		
 	}
-	public int calcualteTax()//calculate tax
+	public int calculateTax()//calculates tax
 	{
 		
 	}
