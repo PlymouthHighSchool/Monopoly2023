@@ -16,7 +16,8 @@ public class CornerSpace extends Space {
 	}
 	
 	public void parkingReset() {
-		
+		freeParkingMoney=500;
+	
 	}
 	
 	public void getParkingMoney() {
