@@ -2,7 +2,7 @@ import java.awt.*;
 
 public class Turn {
 	private int doubleCount, rollNum;
-	private static Dice[] dice;
+	private static Dice[] dice = new Dice[2];
 	private Player currentPlayer;
 	
 	public static Player getPlayerInfo() {
@@ -10,7 +10,7 @@ public class Turn {
 	}
 	
 	public static boolean checkDoubles() {
-		if(dice[0].rollVal == dice[1].rollVall) {
+		if(dice[0].getSideNum() == dice[1].getSideNum()) {
 			doubleCount++;
 		} 
 		
@@ -27,11 +27,9 @@ public class Turn {
 	
 	public static void endTurn() {
 		for(int i = 0; i <= 1; i++)
-			dice[i].reset;
+			dice[i].reset();
 		doubleCount = 0;
 		rollNum = 0;
 		currentPlayer = null;
 	}
-	
-	public static Card[]
 }
