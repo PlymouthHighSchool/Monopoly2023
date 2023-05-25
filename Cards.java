@@ -1,5 +1,3 @@
-package Monopoly;
-
 public class Cards {
 	String message;
 	int[] thePosition;
