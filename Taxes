@@ -10,7 +10,8 @@ public class Taxes extends Space {
 		
 	}
 	
-	public void getTax()//gets the tax needed from the space  
-	{
+	public void getTax() { //takes tax from palyer's wallet
+		Player p = Turn.getPlayerInfo();
+		p.changeWallet(-1 * p.calcTax(p.getTotalWorth()));
 	}
-	}
+}
