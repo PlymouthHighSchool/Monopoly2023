@@ -20,4 +20,8 @@ public class Property extends Object {
 	public void setIsOwned(boolean owned) {
 		isOwned = owned;
 	}
+	
+	public int getCostProperty() {
+		return costProperty;
+	}
 }
