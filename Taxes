@@ -1,0 +1,16 @@
+public class Taxes extends Space {
+	int payTax; //amount of tax that has to paid when landed on the space
+	
+	public Taxes() 
+	{
+		
+	}
+	public int calculateTax()//calculates tax
+	{
+		
+	}
+	
+	public void getTax()//gets the tax needed from the space  
+	{
+	}
+	}

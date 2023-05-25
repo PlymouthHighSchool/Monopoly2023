@@ -1,0 +1,10 @@
+
+public class Buildings {
+int costOfBuilding;
+int totalBuildingLimit;
+
+public Buildings() { // 32 house limit, 12 hotel limit
+	costOfBuildings = 0; 
+	totalBuildinglimit = 0;
+}
+}
