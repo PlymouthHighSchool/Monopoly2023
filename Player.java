@@ -37,6 +37,10 @@ public class Player{
 		return  myAmount ;
 	}
 	
+	public int getWallet() {
+		return wallet;
+	}
+	
 	public int calcTax(int totalWorth) {
 		totalWorth = (int) (totalWorth * .9);
 		return totalWorth;
