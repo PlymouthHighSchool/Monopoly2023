@@ -10,31 +10,31 @@ public class Player{
 	Property myProperties[] = new Property()[22];
 	
 	public int numOfHotels() {
-		int myAmount;
+		int hotelAmount;
 		for(int count = 0; count < 23; count++ ) {
 			if (myProperties[count] == null) {
-				myAmount = myAmount;
+				hotelAmount = hotelAmount;
 			}
 			else {
-				myAmount++;
+				hotelAmount += (myProperties[count].getNumHotels ;
 			}
 		}
 		
-		return  myAmount;
+		return  hotelAmount;
 	}
 	
 	public int numOfHouses() {
-		int myAmount;
+		int houseAmount;
 		for(int count = 0; count < 23; count++ ) {
 			if (myProperties[count] == null) {
-				myAmount = myAmount;
+				houseAmount = houseAmount;
 			}
 			else {
-				myAmount++;
+				houseAmount+= (myProperties[count].getNumHouses;
 			}
 		}
 		
-		return  myAmount ;
+		return  houseAmount ;
 	}
 	
 	public int calcTax(int totalWorth) {
