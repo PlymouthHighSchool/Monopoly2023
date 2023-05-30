@@ -35,6 +35,10 @@ public class Player{
 		return  myAmount ;
 	}
 	
+
+	public int getWallet() {
+		return wallet;
+}
 	public void changeLocation(int newLocation) {
 		location = newLocation;
 	}
