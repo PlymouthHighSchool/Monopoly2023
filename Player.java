@@ -19,7 +19,6 @@ public class Player{
 				myAmount++;
 			}
 		}
-		
 		return  myAmount;
 	}
 	
@@ -33,19 +32,19 @@ public class Player{
 				myAmount++;
 			}
 		}
-		
 		return  myAmount ;
 	}
 	
+
 	public int getWallet() {
 		return wallet;
+}
+	public void changeLocation(int newLocation) {
+		location = newLocation;
 	}
 	
 	public int calcTax(int totalWorth) {
 		totalWorth = (int) (totalWorth * .9);
 		return totalWorth;
-		
 	}
-
-	
 }
