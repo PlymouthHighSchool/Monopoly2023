@@ -12,10 +12,7 @@ public class Player{
 	public int numOfHotels() {
 		int hotelAmount;
 		for(int count = 0; count < 23; count++ ) {
-			if (myProperties[count] == null) {
-				hotelAmount = hotelAmount;
-			}
-			else {
+			if (myProperties[count] != null) {
 				hotelAmount += (myProperties[count].getNumHotels ;
 			}
 		}
@@ -26,10 +23,7 @@ public class Player{
 	public int numOfHouses() {
 		int houseAmount;
 		for(int count = 0; count < 23; count++ ) {
-			if (myProperties[count] == null) {
-				houseAmount = houseAmount;
-			}
-			else {
+			if (myProperties[count] != null) {
 				houseAmount+= (myProperties[count].getNumHouses;
 			}
 		}
