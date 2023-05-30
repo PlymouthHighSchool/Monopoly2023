@@ -42,6 +42,11 @@ public class Player{
 		return totalWorth;
 		
 	}
-
+public boolean checkBankruptcy() {
+	if (wallet<0) 
+		return true;
+	else 
+		return false;
+}
 	
 }
