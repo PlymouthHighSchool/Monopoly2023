@@ -1,0 +1,27 @@
+public class CornerSpace extends Space {
+	int freeParkingMoney;
+	String nameOfSpace;
+	
+	public CornerSpace(String name) {
+		nameOfSpace = name;
+		freeParkingMoney = 500;
+	}
+	
+	public void goJail() {
+		
+	}
+	
+	public void addTax(int taxedMoney) { //adds taxed money to free parking money. added a parameter 
+		freeParkingMoney += taxedMoney; 
+	}
+	
+	public void parkingReset() {
+		freeParkingMoney=500;
+	
+	}
+	
+	public void getParkingMoney() { //gives the player all free parking money 
+		return freeParkingMoney;
+
+	}
+}
