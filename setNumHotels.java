@@ -1,4 +1,3 @@
-	public void setNumHotels() {
-		numHotels = inNumHotels;
-	}
+public void setNumHotels(int inNumHotels) {
+	numHotels = inNumHotels;
 }
