@@ -1,4 +1,4 @@
-
-public class getMortgaged {
-
+	public boolean getMortgaged() {
+		return isMortgaged;
+	}
 }
