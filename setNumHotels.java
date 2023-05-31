@@ -1,4 +1,4 @@
-
-public class setNumHotels {
-
+	public void setNumHotels() {
+		numHotels = inNumHotels;
+	}
 }
