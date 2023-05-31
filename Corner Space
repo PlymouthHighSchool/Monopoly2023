@@ -11,15 +11,17 @@ public class CornerSpace extends Space {
 		
 	}
 	
-	public void addTax() {
-		
+	public void addTax(int taxedMoney) { //adds taxed money to free parking money. added a parameter 
+		freeParkingMoney += taxedMoney; 
 	}
 	
 	public void parkingReset() {
-		
+		freeParkingMoney=500;
+	
 	}
 	
-	public void getParkingMoney() {
-		
+	public void getParkingMoney() { //gives the player all free parking money 
+		return freeParkingMoney;
+
 	}
 }
