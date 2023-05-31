@@ -1,6 +1,6 @@
 private static int unmortgage(Property theProperty) {
 	int tempNum;
-	if (theProperty.getMortgaged() == false) {
+	if (theProperty.getMortgaged() == true) {
 		if (theProperty.getNumHotels == 1) {
 			tempNum = (theProperty.getCostProperty() + (theProperty.getBuildingCost() * 5)) / 2;
 		}
