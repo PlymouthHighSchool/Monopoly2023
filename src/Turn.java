@@ -21,8 +21,13 @@ public class Turn {
 		}
 	}
 	
-	public static Card[] initiateTrade(Player target, Card obj) {		
-		
+	public static TradePacket initiateTrade(Player target, Card[] objs, int price, int cardNum) {
+		TradePacket request = TradePacket();
+		request.setTarget(target);
+		request.setCards(objs);
+		request.setPrice(price);
+		request.setCardNum(cardNum);
+		return request;
 	}
 	
 	public static void endTurn() {
