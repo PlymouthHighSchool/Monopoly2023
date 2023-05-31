@@ -1,4 +1,4 @@
-
-public class setMortgaged {
-
+	public void setMortgaged(Boolean mortgaged) {
+		isMortgaged = mortgaged;
+	}
 }
