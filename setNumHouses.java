@@ -1,4 +1,3 @@
 public void setNumHouses(int inNumHouses) {
-		numHouses = inNumHouses;
-	}
+	numHouses = inNumHouses;
 }
