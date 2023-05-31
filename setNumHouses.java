@@ -1,4 +1,4 @@
-public void setNumHouses() {
+public void setNumHouses(int inNumHouses) {
 		numHouses = inNumHouses;
 	}
 }
