@@ -1,4 +1,4 @@
-
-public class setNumHouses {
-
+public void setNumHouses() {
+		numHouses = inNumHouses;
+	}
 }
