@@ -1,5 +1,3 @@
-	public int getBuidlingCost() {
-		return costOfBuilding;
-	}
+public int getBuildingCost() {
+	return costOfBuilding;
 }
-
