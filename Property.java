@@ -12,7 +12,27 @@ public class Property extends Object {
 	int propertyThreeHouses;
 	int propertyFourHouses;
 	int propertyHotel;
-
+	
+public int getRent() { //returns the cost of landing on the property
+	int rentAmount=0;
+	if (numHotels == 1) {
+		rentAmount = propertyHotel;
+	}
+	else if (numHouses == 1) { 
+		 rentAmount = propertyOneHouse; 
+	}
+	else if (numHouses ==2) {
+		 rentAmount = propertyTwoHouse;
+	}
+	else if (numHouses == 3) {
+		 rentAmount = propertyThreeHouse;
+	}
+	else if (numHouses == 4) {
+		rentAmount = propertyFourHouse;
+	}
+		return rentAmount;
+	}
+	
 	public boolean getIsOwned() {
 		return isOwned;
 	}
