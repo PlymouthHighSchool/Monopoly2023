@@ -16,7 +16,6 @@ public class Player {
 				hotelAmount += (myProperties[count].getNumHotels());
 			}
 		}
-		
 		return  hotelAmount;
 	}
 	
@@ -31,10 +30,17 @@ public class Player {
 		return  houseAmount ;
 	}
 	
+
+	public int getWallet() {
+		return wallet;
+}
+	public void changeLocation(int newLocation) {
+		location = newLocation;
+	}
+	
 	public int calcTax(int totalWorth) {
 		totalWorth = (int) (totalWorth * .9);
 		return totalWorth;
-		
 	}
 
 }
