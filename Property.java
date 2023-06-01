@@ -7,6 +7,7 @@ public class Property extends Object {
 	int rent;
 	boolean isMortgaged;
 	String colorSet;
+	String name;
 	int propertyOneHouse;
 	int propertyTwoHouses;
 	int propertyThreeHouses;
@@ -20,20 +21,24 @@ public class Property extends Object {
 	public void setIsOwned(boolean owned) {
 		isOwned = owned;
 	}
-public Property() {
-	costProperty = 0;
+	
+	public String getColor() {
+		return colorSet;
+}
+public Property(String name, int costProperty, int rent,int propertyOneHouse, int propertyTwoHouses, int propertyThreeHouses,int propertyFourHouses,int propertyHotel,String colorSet) {
+	costProperty = costProperty;
 	numHouses = 0;
 	numHotels = 0;
 	isOwned = false;
-	rent = 0;
+	rent = rent;
 	isMortgaged = false;
-	colorSet = "";
-	propertyOneHouse = 0;
-	propertyTwoHouses = 0;
-	propertyThreeHouses = 0;
-	propertyFourHouses = 0;
-	propertyHotel = 0;
-	
+	propertyOneHouse = propertyOneHouse;
+	propertyTwoHouses = propertyTwoHouses;
+	propertyThreeHouses = propertyThreeHouses;
+	propertyFourHouses = propertyFourHouses;
+	propertyHotel = propertyHotel;
+	name = name;
+	colorSet = colorSet;
 
 }
 public int getNumHouses() {
@@ -43,5 +48,4 @@ public int getNumHouses() {
 public int getNumHotels() {
 	return numHotels;
 }
-
 }
