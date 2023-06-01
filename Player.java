@@ -1,5 +1,5 @@
 
-public class Player{
+public class Player {
 	int wallet;
 	int location;
 	String piece;
@@ -7,32 +7,27 @@ public class Player{
 	int playerNumber;
 	Boolean inJail ;
 	int timeInJail;
-	Property myProperties[] = new Property()[22];
+	Property myProperties[] = new Property[22];
 	
 	public int numOfHotels() {
-		int myAmount;
+		int hotelAmount = 0;
 		for(int count = 0; count < 23; count++ ) {
-			if (myProperties[count] == null) {
-				myAmount = myAmount;
-			}
-			else {
-				myAmount++;
+			if (myProperties[count] != null) {
+				hotelAmount += (myProperties[count].getNumHotels());
 			}
 		}
-		return  myAmount;
+		return  hotelAmount;
 	}
 	
 	public int numOfHouses() {
-		int myAmount;
+		int houseAmount = 0;
 		for(int count = 0; count < 23; count++ ) {
-			if (myProperties[count] == null) {
-				myAmount = myAmount;
-			}
-			else {
-				myAmount++;
+			if (myProperties[count] != null) {
+				houseAmount+= (myProperties[count].getNumHouses());
 			}
 		}
-		return  myAmount ;
+		
+		return  houseAmount ;
 	}
 	
 
@@ -47,4 +42,5 @@ public class Player{
 		totalWorth = (int) (totalWorth * .9);
 		return totalWorth;
 	}
+
 }
