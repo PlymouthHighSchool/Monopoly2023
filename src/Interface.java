@@ -361,7 +361,8 @@ public class Interface {
 		rollClick.setBounds(1250,0,100,25);
 		rollClick.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-					//the method of the button goes here ASK NORMAN IF U DONT UNDERSTAND!!!!!!!!!
+				int roll = Dice.Roll() + Dice.Roll();
+				rollField.setText(String.valueOf(roll));
 			}
 		});
 		frame.add(rollClick);
@@ -370,7 +371,7 @@ public class Interface {
 		endTurnClick.setBounds(1400,0,100,25);
 		endTurnClick.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-					//the method of the button goes here ASK NORMAN IF U DONT UNDERSTAND!!!!!!!!!
+				Turn.endTurn();
 			}
 		});
 		frame.add(endTurnClick);
