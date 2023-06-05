@@ -8,8 +8,11 @@ public class Player {
 	Boolean inJail ;
 	int timeInJail;
 
-	Property myProperties[] = new Property()[22];
-
+	Property myProperties[] = new Property[22];
+public Player(String playersPiece, int turnOrder) {
+	piece = playersPiece;
+	playerNumber = turnOrder;
+}
 
 	public int numOfHotels() {
 		int hotelAmount = 0;
