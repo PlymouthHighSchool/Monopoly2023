@@ -1,5 +1,3 @@
-package Monopoly;
-
 import java.awt.*;
 
 public class Turn {
