@@ -43,4 +43,12 @@ public class Player {
 		return totalWorth;
 	}
 
+	public void setInJail(boolean GoingToJail) { //setting inJail to what is passed when called on
+		timeInJail=0;//sets to 0 regardless because time in jail is 0 turns after you get there and after you leave
+		inJail=GoingToJail;		
+	}
+	
+	public boolean getInJail() { //simply gets the value of inJail
+		return inJail;
+	}
 }
