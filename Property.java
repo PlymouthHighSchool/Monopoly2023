@@ -30,16 +30,17 @@ public int getRent() { //returns the cost of landing on the property
 	else if (numHouses == 4) {
 		rentAmount = propertyFourHouse;
 	}
-		return rentAmount;
-	}
+	return rentAmount;
+}
 	
-	public boolean getIsOwned() {
-		return isOwned;
-	}
+public boolean getIsOwned() {
+	return isOwned;
+}
 
-	public void setIsOwned(boolean owned) {
-		isOwned = owned;
-	}
+public void setIsOwned(boolean owned) {
+	isOwned = owned;
+}
+
 public Property() {
 	costProperty = 0;
 	numHouses = 0;
@@ -56,6 +57,7 @@ public Property() {
 	
 
 }
+
 public int getNumHouses() {
 	return numHouses;
 }
@@ -64,4 +66,27 @@ public int getNumHotels() {
 	return numHotels;
 }
 
+public int getBuildingCost() {
+	return costOfBuilding;
+}
+
+public int getCostProperty() {
+	return costProperty;
+}
+
+public void setMortgaged(Boolean mortgaged) {
+	isMortgaged = mortgaged;
+}
+
+public void setNumHotels(int inNumHotels) {
+	numHotels = inNumHotels;
+}
+
+public void setNumHouses(int inNumHouses) {
+	numHouses = inNumHouses;
+}
+
+public boolean getMortgaged() {
+	return isMortgaged;
+}
 }
