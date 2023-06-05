@@ -48,7 +48,7 @@ public class Player {
 		wallet=wallet+money; 
 	 }
 	 else {
-		 generateFunds(-1*(wallet+money));
+		 generateFunds(Math.abs(wallet+money));//Math.abs(wallet+money)= the amount of money still owed when paying an amount with insufficient funds
 	 }
  }
  	public int getTotalWorth() {
@@ -58,7 +58,7 @@ public class Player {
  		int totalWorth;
  		int currentPlayer= Player.playerNumber;
  		for(int property=0;property<=22;property++) {
- 			if(myProperties[property].isOwnedBy==currentPlayer) {
+ 			if(myProperties[property].isOwnedBy==currentPlayer) {	//counts through all properties until a property the current player owns is found, then takes the full value of the property and houses and adds it to the total, then continues on.
  				valofProperties=valofProperties+myProperties[property].costProperty;
  				valofHouses=valofHouses+(myProperties[property].numHouses*myProperties[property].costOfBuilding);
  				valofHotels=valofHotels+(myProperties[property].numHotels*myProperties[property].costOfBuilding);
