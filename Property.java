@@ -58,6 +58,10 @@ public Property() {
 
 }
 
+public String getColor() {
+	return colorSet;
+}
+
 public int getNumHouses() {
 	return numHouses;
 }
