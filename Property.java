@@ -23,13 +23,13 @@ public int getRent() { //returns the cost of landing on the property
 		 rentAmount = propertyOneHouse; 
 	}
 	else if (numHouses ==2) {
-		 rentAmount = propertyTwoHouse;
+		 rentAmount = propertyTwoHouses;
 	}
 	else if (numHouses == 3) {
-		 rentAmount = propertyThreeHouse;
+		 rentAmount = propertyThreeHouses;
 	}
 	else if (numHouses == 4) {
-		rentAmount = propertyFourHouse;
+		rentAmount = propertyFourHouses;
 	}
 	return rentAmount;
 }
