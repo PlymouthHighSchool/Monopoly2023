@@ -1,13 +1,8 @@
-public class Cards {
-	String message;
-	int[] thePosition;
-	int venmo;
-	int payout;
-	Boolean getOutOfJail;
-	int houseCharge;
-	int hotelCharge;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
 
-	public class Cards {
+public class Cards {
 	
 	Cards[] communityDeck = new Cards[16];
 	Cards[] chanceDeck = new Cards[18];
@@ -37,16 +32,8 @@ public class Cards {
 		}//closes file		
 	}				
 }
-	
-	
-	public String DoAction() {
-		return "";
+
 		
-	}
-	
-	private int calculatePayout() {
-		return 0;
 		
-	}
-}
+	
 
