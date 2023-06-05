@@ -12,7 +12,25 @@ public class Property extends Object {
 	int propertyThreeHouses;
 	int propertyFourHouses;
 	int propertyHotel;
+	int costOfBuilding;
 	
+public Property() {
+	costProperty = 0;
+	numHouses = 0;
+	numHotels = 0;
+	isOwned = false;
+	rent = 0;
+	isMortgaged = false;
+	colorSet = "";
+	propertyOneHouse = 0;
+	propertyTwoHouses = 0;
+	propertyThreeHouses = 0;
+	propertyFourHouses = 0;
+	propertyHotel = 0;
+	
+
+}
+
 public int getRent() { //returns the cost of landing on the property
 	int rentAmount=0;
 	if (numHotels == 1) {
@@ -22,13 +40,13 @@ public int getRent() { //returns the cost of landing on the property
 		 rentAmount = propertyOneHouse; 
 	}
 	else if (numHouses ==2) {
-		 rentAmount = propertyTwoHouse;
+		 rentAmount = propertyTwoHouses;
 	}
 	else if (numHouses == 3) {
-		 rentAmount = propertyThreeHouse;
+		 rentAmount = propertyThreeHouses;
 	}
 	else if (numHouses == 4) {
-		rentAmount = propertyFourHouse;
+		rentAmount = propertyFourHouses;
 	}
 	return rentAmount;
 }
@@ -40,6 +58,7 @@ public boolean getIsOwned() {
 public void setIsOwned(boolean owned) {
 	isOwned = owned;
 }
+
 
 public Property() {
 	costProperty = 0;
@@ -61,6 +80,7 @@ public Property() {
 public String getColor() {
 	return colorSet;
 }
+
 
 public int getNumHouses() {
 	return numHouses;
