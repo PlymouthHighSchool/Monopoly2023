@@ -12,6 +12,7 @@ public class Property extends Object {
 	int propertyThreeHouses;
 	int propertyFourHouses;
 	int propertyHotel;
+	int costOfBuilding;
 	
 public int getRent() { //returns the cost of landing on the property
 	int rentAmount=0;
@@ -22,13 +23,13 @@ public int getRent() { //returns the cost of landing on the property
 		 rentAmount = propertyOneHouse; 
 	}
 	else if (numHouses ==2) {
-		 rentAmount = propertyTwoHouse;
+		 rentAmount = propertyTwoHouses;
 	}
 	else if (numHouses == 3) {
-		 rentAmount = propertyThreeHouse;
+		 rentAmount = propertyThreeHouses;
 	}
 	else if (numHouses == 4) {
-		rentAmount = propertyFourHouse;
+		rentAmount = propertyFourHouses;
 	}
 	return rentAmount;
 }
@@ -56,6 +57,10 @@ public Property() {
 	propertyHotel = 0;
 	
 
+}
+
+public String getColor() {
+	return colorSet;
 }
 
 public int getNumHouses() {
