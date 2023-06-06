@@ -24,6 +24,14 @@ public Player(String playersPiece, int turnOrder) {
 		return  hotelAmount;
 	}
 	
+	public int getJailCards() {
+		return(numOfJailCards);
+	}
+	
+	public void setJailCards(int jailCardsNumber) {//chan\mber of GOOJF Cards
+		numOfJailCards = jailCardsNumber;
+	}
+	
 	public int numOfHouses() {
 		int houseAmount = 0;
 		for(int count = 0; count < 23; count++ ) {
