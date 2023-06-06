@@ -1,5 +1,7 @@
+
+
 public class Houses {
-	int totalBuildingLimit;
+int totalBuildingLimit;
 	
 	Houses() {
 		totalBuildingLimit = 32;	
@@ -8,6 +10,11 @@ public class Houses {
 	public int getBuildingLimit() {
 		return totalBuildingLimit; 
 	}
+
+	public void returnHouses(Property currentProperty) { //When a hotel on a property is sold, four houses are taken from the total and put in its place
+		currentProperty.numofHouses=4;
+		totalBuildingLimit=totalBuildingLimit-4;
+
 	
 
 	public void buildHouse(Houses buildLocation, Player currentPlayer) { //takes a house from the total and builds a house on a property
@@ -19,5 +26,6 @@ public class Houses {
 		totalBuildingLimit = totalBuildingLimit - 4;
 		currentProperty.numHouses = currentProperty.numHouses - 4;
  main
+
 	}
 }
