@@ -7,7 +7,7 @@ public class CornerSpace extends Space {
 		freeParkingMoney = 500;
 	}
 	
-	public void goJail() {//sets location of player to jail and sets the boolean inJail from player class to true
+	public void goJail(Player currentPlayer) {//sets location of player to jail and sets the boolean inJail from player class to true
 		currentPlayer.changeLocation(10); //setting position on array to 10, which is the integer location of jail
 		currentPlayer.setInJail(true);//calls on the setter to set inJail (from player class) to true
 	}
