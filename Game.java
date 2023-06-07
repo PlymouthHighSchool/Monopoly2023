@@ -54,4 +54,7 @@ public void setSpaces(){
 	arrSpaces[38]=new Taxes();
 	arrSpaces[39]=new Property("BOARDWALK",400,50,200,600,1400,1700,2000,"Blue");
 }
+	public Object[] getArrSpace() {
+	return arrSpaces;
+}
 }
