@@ -43,7 +43,6 @@ private static int mortgage(Property theProperty) {
 		else {
 			tempNum = (theProperty.getCostProperty() + (theProperty.getBuildingCost() * theProperty.getNumHouses())) / 2;
 		}
-		
 		theProperty.setMortgaged(true);
 		return tempNum;
 	}
@@ -59,8 +58,7 @@ private static int mortgage(Property theProperty) {
 	public static boolean checkDoubles() {
 		if(dice[0].getSideNum() == dice[1].getSideNum()) {
 			doubleCount++;
-		} 
-		
+		}
 		if(doubleCount >= 3) {
 			return false;
 		} else {
@@ -86,6 +84,6 @@ private static int mortgage(Property theProperty) {
 	}
 	
 	public void incrementPosition() {
-			currentPlayer.location = currentPlayer.location + rollNum;
-		}
+		currentPlayer.location = currentPlayer.location + rollNum;
+	}
 }
