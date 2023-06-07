@@ -5,7 +5,7 @@ public class Game {
 	int numOfPlayers;
 	Player[] allPlayers = new Player[numOfPlayers];
 	Player[] playerOrder = new Player(piece);
-	Space[] arrSpaces = new Space[40];
+	Object[] arrSpaces = new Object[40];
 	int TopChanceCard;
 	int[68] randomCardOrder;
 	interface theInterface = new interface();
@@ -54,7 +54,18 @@ public void setSpaces(){
 	arrSpaces[38]=new Taxes();
 	arrSpaces[39]=new Property("BOARDWALK",400,50,200,600,1400,1700,2000,"Blue");
 }
+
 	public Player[] getPlayerArray() {
 		return allPlayers;
 	}
+
+
+	public Object[] getArrSpace() {
+	return arrSpaces;
+}
+
+public int getPlayerNumber() {
+	return playerNumber;
+}
+
 }

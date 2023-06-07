@@ -1,9 +1,9 @@
+package Monopoly;
 import java.awt.*;
-
 public class Turn {
-	private static int doubleCount, rollNum;
-	private static Dice[] dice = new Dice[2];
-	private static Player currentPlayer;
+	int doubleCount, rollNum;
+	Dice[] dice = new Dice[2];
+	Player currentPlayer;
 	boolean rolled;
 	int unmortgaged;
 
@@ -15,6 +15,11 @@ public class Turn {
 		boolean rolled;
 		int unmortgaged;
 	}
+	 public void doTurn(Player playerNow, Game theGame){// rolls the dice, changes the players position and checks for doubles rolled
+		rollNum= dice[0].Roll() + dice[1].Roll();
+		incrementPosition(); 
+		checkDoubles();
+	 }
 	
 private static int unmortgage(Property theProperty) {
 	int tempNum;
@@ -43,7 +48,6 @@ private static int mortgage(Property theProperty) {
 		else {
 			tempNum = (theProperty.getCostProperty() + (theProperty.getBuildingCost() * theProperty.getNumHouses())) / 2;
 		}
-		
 		theProperty.setMortgaged(true);
 		return tempNum;
 	}
@@ -59,8 +63,7 @@ private static int mortgage(Property theProperty) {
 	public static boolean checkDoubles() {
 		if(dice[0].getSideNum() == dice[1].getSideNum()) {
 			doubleCount++;
-		} 
-		
+		}
 		if(doubleCount >= 3) {
 			return false;
 		} else {
@@ -86,6 +89,8 @@ private static int mortgage(Property theProperty) {
 	}
 	
 	public void incrementPosition() {
-			currentPlayer.location = currentPlayer.location + rollNum;
-		}
+		currentPlayer.location = currentPlayer.location + rollNum;
+	}
+}
+	
 }

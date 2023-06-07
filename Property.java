@@ -1,5 +1,5 @@
 
-public class Property extends Object {
+public class Property extends Space {
 	int costProperty;
 	int numHouses;
 	int numHotels;
