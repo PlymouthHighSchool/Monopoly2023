@@ -15,8 +15,6 @@ public class Property extends Space {
 	int propertyHotel;
 	int costOfBuilding;
 	
-
-
 public Property(String varName, int varCostProperty, int varRent,int varPropertyOneHouse, int varPropertyTwoHouses, int varPropertyThreeHouses,int varPropertyFourHouses,int varPropertyHotel,String varColorSet) {
 	costProperty = varCostProperty;
 	numHouses = 0;
@@ -30,7 +28,7 @@ public Property(String varName, int varCostProperty, int varRent,int varProperty
 	propertyThreeHouses = 0;
 	propertyFourHouses = 0;
 	propertyHotel = 0;
-	
+}
 
 public int getRent() { //returns the cost of landing on the property
 	int rentAmount=0;
@@ -58,44 +56,11 @@ public boolean getIsOwned() {
 
 public void setIsOwned(boolean owned) {
 	isOwned = owned;
-}
-
-
-public Property() {
-	costProperty = 0;
-	numHouses = 0;
-	numHotels = 0;
-	isOwned = false;
-	rent = varRent;
-	isMortgaged = false;
-	propertyOneHouse = varPropertyOneHouse;
-	propertyTwoHouses = varPropertyTwoHouses;
-	propertyThreeHouses = varPropertyThreeHouses;
-	propertyFourHouses = varPropertyFourHouses;
-	propertyHotel = varPropertyHotel;
-	name = varName;
-	colorSet = varColorSet;
-
-}
-
-
-public boolean getIsOwned() {
-		return isOwned;
-
-	}
-public void setIsOwned(boolean owned) {
-		isOwned = owned;
-	}
-	
-public String getColor() {
-		return colorSet;
-}		
+}	
 
 public String getColor() {
 	return colorSet;
 }
-
-
 
 public int getNumHouses() {
 	return numHouses;
