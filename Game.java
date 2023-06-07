@@ -5,7 +5,7 @@ public class Game {
 	int numOfPlayers;
 	Player[] allPlayers = new Player[numOfPlayers];
 	Player[] playerOrder = new Player(piece);
-	Space[] arrSpaces = new Space[40];
+	Object[] arrSpaces = new Object[40];
 	int TopChanceCard;
 	int[68] randomCardOrder;
 	interface theInterface = new interface();
