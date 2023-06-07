@@ -21,7 +21,7 @@ public class CornerSpace extends Space {
 	
 	}
 	
-	public void getParkingMoney() { //gives the player all free parking money 
+	public int getParkingMoney() { //gives the player all free parking money 
 		return freeParkingMoney;
 
 	}
