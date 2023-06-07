@@ -2,6 +2,9 @@
 
 public class Houses extends Buildings {
 	int totalBuildingLimit; 
+	public Houses() {//constructor for houses
+	totalBuildingLimit = 32;
+}
 	public void sellHouse(Property house) {
 		Player token = null;
 		token.changeWallet(house.getBuildingCost()/2); //changes the players wallet
