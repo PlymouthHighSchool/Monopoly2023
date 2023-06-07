@@ -62,5 +62,8 @@ public void setSpaces(){
 public int getPlayerNumber() {
 	return playerNumber;
 }
-
+	
+public Player[] getPlayerArray() {
+		return allPlayers;
+	}
 }
