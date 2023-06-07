@@ -12,6 +12,12 @@ public class Game {
 	public void shuffleCards();
 	int topCommunityCard();
 	
+	public Game() { //constructor for game (shuffles cards, creates spaces, instantiates interface) 
+	Space[] arrSpaces = new Space[40];//creates spaces
+	int[68] randomCardOrder;//shuffles cards 
+	interface theInterface = new interface();//instantiates interface
+}
+	
 public void setSpaces(){
 	arrSpaces[0]=new CornerSpace("GO");
 	arrSpaces[1]=new Property("MEDITERANEAN AVENUE",60,2,10,30,90,160,250,"Purple");
