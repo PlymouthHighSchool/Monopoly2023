@@ -2,4 +2,12 @@
 public class Buildings {
 int costOfBuilding;
 int totalBuildingLimit;
+
+public Buildings() { // 32 house limit, 12 hotel limit
+	costOfBuildings = 0; 
+	totalBuildinglimit = 0;
+}
+public int getCost() {//returns the cost of a building
+			return(costOfBuilding);
+	}
 }
