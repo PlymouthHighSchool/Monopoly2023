@@ -13,6 +13,9 @@ public class Cards {
 		
 	}
 	
+	public String getMessage() {
+		return message;
+	}
 	
 	public String DoAction() {
 		return "";
