@@ -5,8 +5,9 @@ public class Property extends Object {
 	int numHotels;
 	boolean isOwned;
 	int rent;
-	boolean isMortgaged;
+	boolean isMortgaged; //add player number and tunr order and use p-g's constructor edit fro it
 	String colorSet;
+	String name;
 	int propertyOneHouse;
 	int propertyTwoHouses;
 	int propertyThreeHouses;
@@ -14,6 +15,23 @@ public class Property extends Object {
 	int propertyHotel;
 	int costOfBuilding;
 	
+
+
+public Property(String varName, int varCostProperty, int varRent,int varPropertyOneHouse, int varPropertyTwoHouses, int varPropertyThreeHouses,int varPropertyFourHouses,int varPropertyHotel,String varColorSet) {
+	costProperty = varCostProperty;
+	numHouses = 0;
+	numHotels = 0;
+	isOwned = false;
+	rent = 0;
+	isMortgaged = false;
+	colorSet = "";
+	propertyOneHouse = 0;
+	propertyTwoHouses = 0;
+	propertyThreeHouses = 0;
+	propertyFourHouses = 0;
+	propertyHotel = 0;
+	
+
 public int getRent() { //returns the cost of landing on the property
 	int rentAmount=0;
 	if (numHotels == 1) {
@@ -48,21 +66,35 @@ public Property() {
 	numHouses = 0;
 	numHotels = 0;
 	isOwned = false;
-	rent = 0;
+	rent = varRent;
 	isMortgaged = false;
-	colorSet = "";
-	propertyOneHouse = 0;
-	propertyTwoHouses = 0;
-	propertyThreeHouses = 0;
-	propertyFourHouses = 0;
-	propertyHotel = 0;
-	
+	propertyOneHouse = varPropertyOneHouse;
+	propertyTwoHouses = varPropertyTwoHouses;
+	propertyThreeHouses = varPropertyThreeHouses;
+	propertyFourHouses = varPropertyFourHouses;
+	propertyHotel = varPropertyHotel;
+	name = varName;
+	colorSet = varColorSet;
 
 }
+
+
+public boolean getIsOwned() {
+		return isOwned;
+
+	}
+public void setIsOwned(boolean owned) {
+		isOwned = owned;
+	}
+	
+public String getColor() {
+		return colorSet;
+}		
 
 public String getColor() {
 	return colorSet;
 }
+
 
 
 public int getNumHouses() {
