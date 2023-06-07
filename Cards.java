@@ -6,9 +6,6 @@ public class Cards {
 	Boolean getOutOfJail;
 	int houseCharge;
 	int hotelCharge;
-
-	public class Cards {
-	
 	Cards[] communityDeck = new Cards[16];
 	Cards[] chanceDeck = new Cards[18];
 	
@@ -26,7 +23,7 @@ public class Cards {
 			thePosition = readTheFile.nextLine();
 			venmo = readTheFile.nextLine();
 			payout = readTheFile.nextLine();
-			getOutofJail = readTheFile.nextLine();
+			getOutOfJail = readTheFile.nextLine();
 			houseCharge = readTheFile.nextLine();
 			hotelCharge = readTheFile.nextLine();
 		}	
@@ -35,21 +32,20 @@ public class Cards {
 		catch (FileNotFoundException e) {//will catch any errors before it breaks something more serious WILL NOT WORK WITHOUT try{} catch{}
 			System.out.println("An error occurred");
 		}//closes file		
+
 	}				
 }
 	
 	public String getMessage() {
 		return message;
+
 	}
 	
 	public String DoAction() {
 		return "";
-		
 	}
 	
 	private int calculatePayout() {
 		return 0;
-		
 	}
 }
-
