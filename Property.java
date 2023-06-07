@@ -16,6 +16,7 @@ public class Property extends Object {
 	int costOfBuilding;
 	
 
+
 public Property(String varName, int varCostProperty, int varRent,int varPropertyOneHouse, int varPropertyTwoHouses, int varPropertyThreeHouses,int varPropertyFourHouses,int varPropertyHotel,String varColorSet) {
 	costProperty = varCostProperty;
 	numHouses = 0;
@@ -30,8 +31,6 @@ public Property(String varName, int varCostProperty, int varRent,int varProperty
 	propertyFourHouses = 0;
 	propertyHotel = 0;
 	
-
-}
 
 public int getRent() { //returns the cost of landing on the property
 	int rentAmount=0;
