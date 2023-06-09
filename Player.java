@@ -46,8 +46,7 @@ public Player(String playersPiece, int turnOrder) {
 public Boolean generateFunds(int financialGoal) {
 		// generateFunds(Math.abs(wallet+money));//Math.abs(wallet+money)= the amount of money still owed when paying an amount with insufficient funds
 		// gives player an option to sell(trade) or mortgage, a property, a GOOJF, to hopefully obtain enough money to get the wallet above the desired amount(0). If they can’t, remove the player with remove() in the Turn class
-		
-		String[] props = new String[200]; //array of the names of all the properties the player has
+		String[] props = new String[22]; //array of the names of all the properties the player has
 		int counter2 = 0;
 		int howMuchTheySold = wallet;// asuming they will take the money they have as a building block for selling props.
 		boolean playerIsOut = false;
