@@ -43,7 +43,43 @@ public Player(String playersPiece, int turnOrder) {
 		return  houseAmount ;
 	}
 	
-
+public Boolean generateFunds(int financialGoal) {
+		// generateFunds(Math.abs(wallet+money));//Math.abs(wallet+money)= the amount of money still owed when paying an amount with insufficient funds
+		// gives player an option to sell(trade) or mortgage, a property, a GOOJF, to hopefully obtain enough money to get the wallet above the desired amount(0). If they can’t, remove the player with remove() in the Turn class
+		
+		String[] props = new String[200]; //array of the names of all the properties the player has
+		int counter2 = 0;
+		int howMuchTheySold = wallet;// asuming they will take the money they have as a building block for selling props.
+		boolean playerIsOut = false;
+		
+		while(howMuchTheySold != financialGoal || playerIsOut) { // while they have not met their fincancial goal they must keep selling properites, and this while loops ask's them using props[] 
+				
+			for(int propCounter = 0; propCounter <23; propCounter++) {
+					if(myProperties[propCounter] != null) { // checks for if there is a prop there
+						props[counter2] = myProperties[propCounter].getName(); // i made this method
+						counter2++;
+					}	
+		} 
+				int num = createOptionPane(props,"would you like to sell any of these properties:", "you NEED money"); //not yet in interface 6/8 11;21
+				myProperties[num].isMortgaged = true; 
+				int whatItCost = myProperties[num].getCostProperty() /2;
+				howMuchTheySold += whatItCost;
+				changeWallet(whatItCost);
+				
+				if(howMuchTheySold == financialGoal) {
+				playerIsOut = false;
+			}
+			else {
+				   //takes them away since they will not be able to come up with necasasry capital
+				Turn.remove(Turn.getPlayerInfo()); // PG is doing this as of 6/6
+				playerIsOut = true;
+			}
+			
+			}
+		return playerIsOut;
+			
+	 }
+	
 	public int getWallet() {
 		return wallet;
 }
