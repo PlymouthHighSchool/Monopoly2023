@@ -15,20 +15,22 @@ public class Property extends Space {
 	int propertyHotel;
 	int costOfBuilding;
 	
-public Property(String varName, int varCostProperty, int varRent,int varPropertyOneHouse, int varPropertyTwoHouses, int varPropertyThreeHouses,int varPropertyFourHouses,int varPropertyHotel,String varColorSet) {
-	costProperty = varCostProperty;
-	numHouses = 0;
-	numHotels = 0;
-	isOwned = false;
-	rent = 0;
-	isMortgaged = false;
-	colorSet = "";
-	propertyOneHouse = 0;
-	propertyTwoHouses = 0;
-	propertyThreeHouses = 0;
-	propertyFourHouses = 0;
-	propertyHotel = 0;
-}
+public Property(String varName, int varCostProperty, int varRent,int varPropertyOneHouse, int varPropertyTwoHouses, int varPropertyThreeHouses,int varPropertyFourHouses,int varPropertyHotel,String varColorSet ) {
+		costProperty = varCostProperty;
+		numHouses = 0;
+		numHotels = 0;
+		isOwned = false;
+		rent = varRent;
+		isMortgaged = false;
+		propertyOneHouse = varPropertyOneHouse;
+		propertyTwoHouses = varPropertyTwoHouses;
+		propertyThreeHouses = varPropertyThreeHouses;
+		propertyFourHouses = varPropertyFourHouses;
+		propertyHotel = varPropertyHotel;
+		name = varName;
+		colorSet = varColorSet;
+
+	}
 
 public int getRent() { //returns the cost of landing on the property
 	int rentAmount=0;
