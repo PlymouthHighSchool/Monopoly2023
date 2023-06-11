@@ -1,9 +1,9 @@
 package Monopoly;
-import java.awt.*;
+
 public class Turn {
-	int doubleCount, rollNum;
+	static int doubleCount, rollNum1, rollNum2;
 	Dice[] dice = new Dice[2];
-	Player currentPlayer;
+	static Player currentPlayer;
 	boolean rolled;
 	int unmortgaged;
 
@@ -15,53 +15,56 @@ public class Turn {
 		boolean rolled;
 		int unmortgaged;
 	}
+	
+	//not done
 	 public void doTurn(Player playerNow, Game theGame){// rolls the dice, changes the players position and checks for doubles rolled
-		rollNum= dice[0].Roll() + dice[1].Roll();
+		rollNum1 = dice[0].Roll();
+		rollNum2 = dice[1].Roll();
 		incrementPosition(); 
 		checkDoubles();
 	 }
 	
-private static int unmortgage(Property theProperty) {
-	int tempNum;
-	if (theProperty.getMortgaged() == true) {
-		if (theProperty.getNumHotels() == 1) {
-			tempNum = (theProperty.getCostProperty() + (theProperty.getBuildingCost() * 5)) / 2;
+	private int unmortgage(Property theProperty) {
+		int tempNum;
+		if (theProperty.getMortgaged() == true) {
+			if (theProperty.getNumHotels() == 1) {
+				tempNum = (theProperty.getCostProperty() + (theProperty.getBuildingCost() * 5)) / 2;
+			}
+			else {
+				tempNum = (theProperty.getCostProperty() + (theProperty.getBuildingCost() * theProperty.getNumHouses())) / 2;
+			}
+			tempNum *= 1.1;
+			theProperty.setMortgaged(false);
+			return tempNum;
 		}
 		else {
-			tempNum = (theProperty.getCostProperty() + (theProperty.getBuildingCost() * theProperty.getNumHouses())) / 2;
+			return 0;	
 		}
-		tempNum *= 1.1;
-		theProperty.setMortgaged(false);
-		return tempNum;
 	}
-	else {
-		return 0;	
-	}
-}
 	
-private static int mortgage(Property theProperty) {
-	int tempNum;
-	if (theProperty.getMortgaged() == false) {
-		if (theProperty.getNumHotels() == 1) {
-			tempNum = (theProperty.getCostProperty() + (theProperty.getBuildingCost() * 5)) / 2;
+	private int mortgage(Property theProperty) {
+		int tempNum;
+		if (theProperty.getMortgaged() == false) {
+			if (theProperty.getNumHotels() == 1) {
+				tempNum = (theProperty.getCostProperty() + (theProperty.getBuildingCost() * 5)) / 2;
+			}
+			else {
+				tempNum = (theProperty.getCostProperty() + (theProperty.getBuildingCost() * theProperty.getNumHouses())) / 2;
+			}
+			theProperty.setMortgaged(true);
+			return tempNum;
 		}
 		else {
-			tempNum = (theProperty.getCostProperty() + (theProperty.getBuildingCost() * theProperty.getNumHouses())) / 2;
+			return 0;	
 		}
-		theProperty.setMortgaged(true);
-		return tempNum;
 	}
-	else {
-		return 0;	
-	}
-}
 
 	public static Player getPlayerInfo() {
 		return currentPlayer;
 	}
 	
-	public static boolean checkDoubles() {
-		if(dice[0].getSideNum() == dice[1].getSideNum()) {
+	public boolean checkDoubles() {
+		if(rollNum1 == rollNum2) {
 			doubleCount++;
 		}
 		if(doubleCount >= 3) {
@@ -71,9 +74,8 @@ private static int mortgage(Property theProperty) {
 		}
 	}
 	
-	public static TradePacket initiateTrade(Player target, Card[] objs, int price, int cardNum) {
-		TradePacket request = TradePacket();
-		request.setTarget(target);
+	public TradePacket initiateTrade(Player target, Cards[] objs, int price, int cardNum) {
+		TradePacket request = new TradePacket(target);
 		request.setCards(objs);
 		request.setPrice(price);
 		request.setCardNum(cardNum);
@@ -82,15 +84,12 @@ private static int mortgage(Property theProperty) {
 	
 	public static void endTurn() {
 		for(int i = 0; i <= 1; i++)
-			dice[i].reset();
 			doubleCount = 0;
-			rollNum = 0;
+			rollNum1 = rollNum2 = 0;
 			currentPlayer = null;
 	}
 	
 	public void incrementPosition() {
-		currentPlayer.location = currentPlayer.location + rollNum;
+		currentPlayer.location = currentPlayer.location + rollNum1 + rollNum2;
 	}
-}
-	
 }

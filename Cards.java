@@ -1,3 +1,5 @@
+package Monopoly;
+
 public class Cards {
 	String message;
 	int[] thePosition;
@@ -10,7 +12,7 @@ public class Cards {
 	Cards[] chanceDeck = new Cards[18];
 	
 	public Cards(int deckType) {
-	File theFile;
+		File theFile;
 		try {
 			if (deckType==1)
 				theFile = new File("\\\\fileserver1\\studentshare\\Java\\Monopoly 2023\\ChanceList.txt");//sets the file path to myFile
@@ -27,7 +29,7 @@ public class Cards {
 			houseCharge = readTheFile.nextLine();
 			hotelCharge = readTheFile.nextLine();
 		}	
-		readTheFile.close();
+			readTheFile.close();
 		}
 		catch (FileNotFoundException e) {//will catch any errors before it breaks something more serious WILL NOT WORK WITHOUT try{} catch{}
 			System.out.println("An error occurred");
@@ -40,5 +42,9 @@ public class Cards {
 	
 	private int calculatePayout() {
 		return 0;
+	}
+	
+	public String getMessage() {
+		return message;
 	}
 }

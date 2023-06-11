@@ -1,24 +1,40 @@
+package Monopoly;
+
 public class Railroads extends Property {
-	
 	String railroadName;
+	static int railroadIndex = 0;
+	static Railroads allRailroads[] = new Railroads[4];
 	
-	public Railroads(String name) {
+	public Railroads(int localLocation, String nameSpace) {
+		super(localLocation, nameSpace);
 		costProperty = 200;
-		railroadName = name;
+		allRailroads[railroadIndex] = this;
+		railroadIndex++;
 	}
 	
-	public int calcRent(int numOfOwnedRailroads) {
-		rent = 25;
-		if (numOfOwnedRailroads == 2) {
-			rent = 50;
+	public int numOwned() {
+		int owned = 0;
+		for(int i = 0; i < 4; i++) {
+			if(this.getOwner() == allRailroads[i].getOwner()) {
+				owned++;
+			}
 		}
-		else if (numOfOwnedRailroads == 3) {
-			rent = 100;
+		return owned;
+	}
+	
+	public int calcRent() {
+		switch(numOwned()) {
+			case 1:
+				return 25;
+			case 2:
+				return 50;
+			case 3:
+				return 100;
+			case 4:
+				return 200;
+			default:
+				return 0;
 		}
-		else {
-			rent = 200;
-		}
-		return rent;
 	}
 	
 	public String getRailroadName() {

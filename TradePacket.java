@@ -1,30 +1,31 @@
-import java.awt.*;
+package Monopoly;
+
 public class TradePacket {
 	private String query;
-	private Card[] offer = new Card[11];
+	private Cards[] offer = new Cards[11];
 	private Player partner;
 	private int asking, cardNum;
 	
-	public TradePacket() {
+	public TradePacket(Player tradePartner) {
 		query = "";
 		for(int i = 0; i <= 10; i++) {
-			offer[i] = Card();
+			offer[i] = new Cards(1);//passing 1 to make work but not right
 		}
-		partner = Player();
+		partner = tradePartner; 
 		asking = 0;
 		cardNum = 0;
 	}
 	
 	private void generateQuery() {
-		String temp = partner.getName() + " would like to trade their ";
+		String temp = partner.getPlayerNumber() + " would like to trade their ";
 		for(int i = 0; i <= cardNum - 1; i++) {
-			temp += offer[i].getName() + ", ";
+			temp += offer[i].getMessage() + ", ";
 		}
 		temp += "for $" + asking + '.';
 		query = temp;
 	}
 	
-	public void setCards(Card[] objs) {
+	public void setCards(Cards[] objs) {
 		offer = objs;
 	}
 	
@@ -45,7 +46,7 @@ public class TradePacket {
 		return query;
 	}
 	
-	public Card[] getCards() {
+	public Cards[] getCards() {
 		return offer;
 	}
 	
@@ -60,5 +61,4 @@ public class TradePacket {
 	public int getCardNum() {
 		return cardNum;
 	}
-
 }

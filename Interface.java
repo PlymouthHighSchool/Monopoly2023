@@ -1,3 +1,5 @@
+package Monopoly;
+
 import java.awt.Color;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
@@ -398,6 +400,12 @@ public class Interface {
 
 		frame.setVisible(true);
 	}
+	
+	public static int createOptionPane(String taxOptions[], String prompt, String payment) {
+		return 0;
+		//this is a placeholder for an unfinished method 
+	}
+	
 	public static void main(String args[]){
 		Interface interFace;
 		interFace = new Interface();

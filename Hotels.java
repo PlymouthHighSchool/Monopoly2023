@@ -1,6 +1,8 @@
+package Monopoly;
+
 
 public class Hotels extends Buildings {
-int totalBuildingLimit;
+	int totalBuildingLimit;
 	
 	Hotels() {
 		totalBuildingLimit = 12;	
