@@ -18,9 +18,8 @@ int totalBuildingLimit;
 		buildLocation.setNumHotels(buildLocation.getNumHotels()+1); //adds a hotel to the hotel total of the player
 	}
 	
-	public void sellHotels(Property hotel) { 
-		Player token = null;
-		token.changeWallet(hotel.getBuildingCost()/2); //changes the players wallet
+	public void sellHotels(Property hotel,  Player currentPlayer) { 
+		currentPlayer.changeWallet(hotel.getBuildingCost()/2); //changes the players wallet
 		hotel.setNumHouses(hotel.numHouses + 4); //adds 4 houses becuase you have just sold 1 hotel, which property is known;
 	}
 }
