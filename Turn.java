@@ -88,6 +88,25 @@ public class Turn {
 	}
 	
 	public void incrementPosition() {
+		currentPlayer.location = currentPlayer.location + rollNum;
+	}
+}
+	public void remove(Player bankruptPlayer) {
+	//gives builings and properties back to the bank and gives the player who made the other bankrupt gets all available money.
+	
+		int moneyOnHand = bankruptPlayer.getTotalWorth();
+		int	lastLocation = bankruptPlayer.getLocation();
+		Space finalPosition;
+		Player moneyReciver;
+		Player[] playerArray =  theGame.getPlayerArray();
+		Object[] spaceArray =theGame.getArrSpace();
+		finalPosition = (Space) spaceArray[lastLocation];
+		moneyReciver = finalPosition.getIsOwnedBy();
+		moneyReciver.changeWallet(moneyOnHand);
+		playerArray[bankruptPlayer.getPlayerNumber()] = null;
+	}
+
 		currentPlayer.location = currentPlayer.location + rollNum1 + rollNum2;
 	}//adds the number rolled to the player position
+
 }
