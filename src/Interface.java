@@ -1,11 +1,22 @@
 import java.awt.Color;
+import java.awt.Cursor;
 import java.awt.Image;
+import java.awt.MouseInfo;
+import java.awt.Point;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+
+import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
@@ -86,6 +97,11 @@ public class Interface {
 		mediterraneanAveLabel.setIcon(mediterraneanAveImage);
 		mediterraneanAveLabel.setVisible(true);
 		mediterraneanAveLabel.setBounds(1100,200,150,300);
+		mediterraneanAveLabel.addMouseListener(new MouseAdapter() {
+			public void mouseClicked(MouseEvent evt) {
+				propertyCardClick();
+			}
+		});
 		frame.add(mediterraneanAveLabel);
 		
 		balticAveLabel = new JLabel();
@@ -93,6 +109,11 @@ public class Interface {
 		balticAveLabel.setIcon(balticAveImage);
 		balticAveLabel.setVisible(true);
 		balticAveLabel.setBounds(1260,200,150,300);
+		balticAveLabel.addMouseListener(new MouseAdapter() {
+			public void mouseClicked(MouseEvent evt) {
+				propertyCardClick();
+			}
+		});
 		frame.add(balticAveLabel);
 		
 		readingRailroadLabel = new JLabel();
@@ -107,6 +128,11 @@ public class Interface {
 		orientalAveLabel.setIcon(orientalAveImage);
 		orientalAveLabel.setVisible(true);
 		orientalAveLabel.setBounds(1580, 200, 150, 300);
+		orientalAveLabel.addMouseListener(new MouseAdapter() {
+			public void mouseClicked(MouseEvent evt) {
+				propertyCardClick();
+			}
+		});
 		frame.add(orientalAveLabel);
 		
 		vermontAveLabel = new JLabel();
@@ -114,13 +140,32 @@ public class Interface {
 		vermontAveLabel.setIcon(vermontAveImage);
 		vermontAveLabel.setVisible(true);
 		vermontAveLabel.setBounds(1740, 200, 150, 300);
+		vermontAveLabel.addMouseListener(new MouseAdapter() {
+			public void mouseClicked(MouseEvent evt) {
+				propertyCardClick();
+			}
+		});
 		frame.add(vermontAveLabel);
 		
-		connecticutAveLabel = new JLabel();
-		ImageIcon connecticutAveImage = new ImageIcon(new ImageIcon("T:\\Java\\MonopolyCards\\connecticutAve.jpg").getImage().getScaledInstance(150, 200, Image.SCALE_SMOOTH)); 
-		connecticutAveLabel.setIcon(connecticutAveImage);
+		connecticutAveLabel = new JLabel("C Ave");
+		BufferedImage bufferedImage;
+		try {
+			bufferedImage = ImageIO.read(new File("T:\\Java\\MonopolyCards\\connecticutAve.jpg"));
+		
+			Image image = bufferedImage.getScaledInstance(150, 300, Image.SCALE_DEFAULT);
+			ImageIcon icon = new ImageIcon(image);
+		
+			connecticutAveLabel.setIcon(icon);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 		connecticutAveLabel.setVisible(true);
-		connecticutAveLabel.setBounds(1900, 200, 150, 300);
+		connecticutAveLabel.setBounds(1100, 500, 150, 300);
+		connecticutAveLabel.addMouseListener(new MouseAdapter() {
+			public void mouseClicked(MouseEvent evt) {
+				propertyCardClick();
+			}
+		});
 		frame.add(connecticutAveLabel);
 		
 		stCharlesPlaceLabel = new JLabel();
@@ -128,6 +173,11 @@ public class Interface {
 		stCharlesPlaceLabel.setIcon(stCharlesPlaceImage);
 		stCharlesPlaceLabel.setVisible(true);
 		stCharlesPlaceLabel.setBounds(1100, 410, 150, 300);
+		stCharlesPlaceLabel.addMouseListener(new MouseAdapter() {
+			public void mouseClicked(MouseEvent evt) {
+				propertyCardClick();
+			}
+		});
 		frame.add(stCharlesPlaceLabel);
 		
 		electricCompanyLabel = new JLabel();
@@ -142,6 +192,11 @@ public class Interface {
 		statesAveLabel.setIcon(statesAveImage);
 		statesAveLabel.setVisible(true);
 		statesAveLabel.setBounds(1420, 410, 150, 300);
+		statesAveLabel.addMouseListener(new MouseAdapter() {
+			public void mouseClicked(MouseEvent evt) {
+				propertyCardClick();
+			}
+		});
 		frame.add(statesAveLabel);
 		
 		virginiaAveLabel = new JLabel();
@@ -149,6 +204,11 @@ public class Interface {
 		virginiaAveLabel.setIcon(virginiaAveImage);
 		virginiaAveLabel.setVisible(true);
 		virginiaAveLabel.setBounds(1580, 410, 150, 300);
+		virginiaAveLabel.addMouseListener(new MouseAdapter() {
+			public void mouseClicked(MouseEvent evt) {
+				propertyCardClick();
+			}
+		});
 		frame.add(virginiaAveLabel);
 		
 		pennsylvaniaRailroadLabel = new JLabel();
@@ -163,6 +223,11 @@ public class Interface {
 		stJamesPlaceLabel.setIcon(stJamesPlaceImage);
 		stJamesPlaceLabel.setVisible(true);
 		stJamesPlaceLabel.setBounds(1900, 410, 150, 300);
+		stJamesPlaceLabel.addMouseListener(new MouseAdapter() {
+			public void mouseClicked(MouseEvent evt) {
+				propertyCardClick();
+			}
+		});
 		frame.add(stJamesPlaceLabel);
 		
 		tennesseeAveLabel = new JLabel();
@@ -170,6 +235,11 @@ public class Interface {
 		tennesseeAveLabel.setIcon(tennesseeAveImage);
 		tennesseeAveLabel.setVisible(true);
 		tennesseeAveLabel.setBounds(1100, 620, 150, 300);
+		tennesseeAveLabel.addMouseListener(new MouseAdapter() {
+			public void mouseClicked(MouseEvent evt) {
+				propertyCardClick();
+			}
+		});
 		frame.add(tennesseeAveLabel);
 		
 		newYorkAveLabel = new JLabel();
@@ -177,6 +247,11 @@ public class Interface {
 		newYorkAveLabel.setIcon(newYorkAveImage);
 		newYorkAveLabel.setVisible(true);
 		newYorkAveLabel.setBounds(1260, 620, 150, 300);
+		newYorkAveLabel.addMouseListener(new MouseAdapter() {
+			public void mouseClicked(MouseEvent evt) {
+				propertyCardClick();
+			}
+		});
 		frame.add(newYorkAveLabel);
 		
 		kentuckyAveLabel = new JLabel();
@@ -184,6 +259,11 @@ public class Interface {
 		kentuckyAveLabel.setIcon(kentuckyAveImage);
 		kentuckyAveLabel.setVisible(true);
 		kentuckyAveLabel.setBounds(1420, 620, 150, 300);
+		kentuckyAveLabel.addMouseListener(new MouseAdapter() {
+			public void mouseClicked(MouseEvent evt) {
+				propertyCardClick();
+			}
+		});
 		frame.add(kentuckyAveLabel);
 		
 		indianaAveLabel = new JLabel();
@@ -191,6 +271,11 @@ public class Interface {
 		indianaAveLabel.setIcon(indianaAveImage);
 		indianaAveLabel.setVisible(true);
 		indianaAveLabel.setBounds(1580, 620, 150, 300);
+		indianaAveLabel.addMouseListener(new MouseAdapter() {
+			public void mouseClicked(MouseEvent evt) {
+				propertyCardClick();
+			}
+		});
 		frame.add(indianaAveLabel);
 		
 		illinoisAveLabel = new JLabel();
@@ -198,6 +283,11 @@ public class Interface {
 		illinoisAveLabel.setIcon(illinoisAveImage);
 		illinoisAveLabel.setVisible(true);
 		illinoisAveLabel.setBounds(1740, 620, 150, 300);
+		illinoisAveLabel.addMouseListener(new MouseAdapter() {
+			public void mouseClicked(MouseEvent evt) {
+				propertyCardClick();
+			}
+		});
 		frame.add(illinoisAveLabel);
 		
 		BORailroadLabel = new JLabel();
@@ -212,6 +302,11 @@ public class Interface {
 		atlanticAveLabel.setIcon(atlanticAveImage);
 		atlanticAveLabel.setVisible(true);
 		atlanticAveLabel.setBounds(1100, 830, 150, 300);
+		atlanticAveLabel.addMouseListener(new MouseAdapter() {
+			public void mouseClicked(MouseEvent evt) {
+				propertyCardClick();
+			}
+		});
 		frame.add(atlanticAveLabel);
 		
 		ventnorAveLabel = new JLabel();
@@ -219,6 +314,11 @@ public class Interface {
 		ventnorAveLabel.setIcon(ventnorAveImage);
 		ventnorAveLabel.setVisible(true);
 		ventnorAveLabel.setBounds(1260, 830, 150, 300);
+		ventnorAveLabel.addMouseListener(new MouseAdapter() {
+			public void mouseClicked(MouseEvent evt) {
+				propertyCardClick();
+			}
+		});
 		frame.add(ventnorAveLabel);
 		
 		waterWorksLabel = new JLabel();
@@ -233,6 +333,11 @@ public class Interface {
 		marvinGardensLabel.setIcon(marvinGardensImage);
 		marvinGardensLabel.setVisible(true);
 		marvinGardensLabel.setBounds(1580, 830, 150, 300);
+		marvinGardensLabel.addMouseListener(new MouseAdapter() {
+			public void mouseClicked(MouseEvent evt) {
+				propertyCardClick();
+			}
+		});
 		frame.add(marvinGardensLabel);
 		
 		pacificAveLabel = new JLabel();
@@ -240,6 +345,11 @@ public class Interface {
 		pacificAveLabel.setIcon(pacificAveImage);
 		pacificAveLabel.setVisible(true);
 		pacificAveLabel.setBounds(1740, 830, 150, 300);
+		pacificAveLabel.addMouseListener(new MouseAdapter() {
+			public void mouseClicked(MouseEvent evt) {
+				propertyCardClick();
+			}
+		});
 		frame.add(pacificAveLabel);
 		
 		noCarolinaAveLabel = new JLabel();
@@ -247,6 +357,11 @@ public class Interface {
 		noCarolinaAveLabel.setIcon(noCarolinaAveImage);
 		noCarolinaAveLabel.setVisible(true);
 		noCarolinaAveLabel.setBounds(1900, 830, 150, 300);
+		noCarolinaAveLabel.addMouseListener(new MouseAdapter() {
+			public void mouseClicked(MouseEvent evt) {
+				propertyCardClick();
+			}
+		});
 		frame.add(noCarolinaAveLabel);
 		
 		pennsylvaniaAveLabel = new JLabel();
@@ -254,6 +369,11 @@ public class Interface {
 		pennsylvaniaAveLabel.setIcon(pennsylvaniaAveImage);
 		pennsylvaniaAveLabel.setVisible(true);
 		pennsylvaniaAveLabel.setBounds(1100, 1040, 150, 300);
+		pennsylvaniaAveLabel.addMouseListener(new MouseAdapter() {
+			public void mouseClicked(MouseEvent evt) {
+				propertyCardClick();
+			}
+		});
 		frame.add(pennsylvaniaAveLabel);
 		
 		shortLineRailroadLabel = new JLabel();
@@ -269,6 +389,11 @@ public class Interface {
 		parkPlaceLabel.setIcon(parkPlaceImage);
 		parkPlaceLabel.setVisible(true);
 		parkPlaceLabel.setBounds(1420, 1040, 150, 300);
+		parkPlaceLabel.addMouseListener(new MouseAdapter() {
+			public void mouseClicked(MouseEvent evt) {
+				propertyCardClick();
+			}
+		});
 		frame.add(parkPlaceLabel);
 		
 		boardWalkLabel = new JLabel();
@@ -276,6 +401,11 @@ public class Interface {
 		boardWalkLabel.setIcon(boardWalkImage);
 		boardWalkLabel.setVisible(true);
 		boardWalkLabel.setBounds(1580, 1040, 150, 300);
+		boardWalkLabel.addMouseListener(new MouseAdapter() {
+			public void mouseClicked(MouseEvent evt) {
+				propertyCardClick();
+			}
+		});
 		frame.add(boardWalkLabel);
 		
 		getOutOfJailFreeccLabel = new JLabel();
@@ -352,7 +482,7 @@ public class Interface {
 		buyClick.setBounds(1100,0,100,25);
 		buyClick.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-					//the method of the button goes here ASK NORMAN IF U DONT UNDERSTAND!!!!!!!!!
+					buyClick();
 			}
 		});
 		frame.add(buyClick);
@@ -361,8 +491,7 @@ public class Interface {
 		rollClick.setBounds(1250,0,100,25);
 		rollClick.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				int roll = Dice.Roll() + Dice.Roll();
-				rollField.setText(String.valueOf(roll));
+					//the method of the button goes here ASK NORMAN IF U DONT UNDERSTAND!!!!!!!!!
 			}
 		});
 		frame.add(rollClick);
@@ -371,7 +500,7 @@ public class Interface {
 		endTurnClick.setBounds(1400,0,100,25);
 		endTurnClick.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Turn.endTurn();
+					//the method of the button goes here ASK NORMAN IF U DONT UNDERSTAND!!!!!!!!!
 			}
 		});
 		frame.add(endTurnClick);
@@ -403,4 +532,69 @@ public class Interface {
 		interFace = new Interface();
 	}
 	
+	public void buyClick() {
+		buy();
+	}
+	
+	public void propertyCardClick() { // creates a display for clicked properties
+		JPanel propPnl = new JPanel();
+		Point mousePos = MouseInfo.getPointerInfo().getLocation();
+		int x = (int) mousePos.getX();
+		int y = (int) mousePos.getY();
+		propPnl.setBounds(x, y, 100, 150);
+		
+		JButton Sell = new JButton("Sell");
+		Sell.setBounds(0, 0, 100, 50);
+		
+		JButton Trade = new JButton("Trade");
+		Trade.setBounds(0, 50, 100, 50);
+		
+		JButton MortgageUnmortgage = new JButton("Mortgage");
+		MortgageUnmortgage.setBounds(0, 100, 100, 50);
+		
+		propPnl.add(Sell);
+		propPnl.add(Trade);
+		propPnl.add(MortgageUnmortgage);
+		
+		propPnl.setVisible(true);
+		frame.add(propPnl);
+	}
+	
+	public void tradeClick() {
+		JPanel tradePnl = new JPanel();
+		tradePnl.setBounds(0, 0, 100, 100);
+		frame.add(tradePnl);
+		trade();
+	}
+	
+	public void DisplayPieceOptions() {
+		JPanel piecePnl = new JPanel();
+		piecePnl.setBounds(0, 0, 100, 100);
+		frame.add(piecePnl);
+		//add labels with piece images & mouse listener for each
+	}
+	
+	public int createOptionPane(String[] options, String message, String title) {
+		int result = JOptionPane.showOptionDialog(null, message, title, 0, 3, null, options, options[0]);
+		return result;
+	}
+	
+	public void createOptionPane(String message, String title) {
+		JOptionPane.showMessageDialog(null, message, title, 1);
+	}
+	
+	public void mortgagePropClick() {
+		mortgage(Game.getArrSpace()[currentPlayer.getLocation()]);
+	}
+	
+	public void unmortgagePropClick() {
+		unmortgage(Game.getArrSpace()[currentPlayer.getLocation()]);
+	}
+	
+	public static int getNumPlayers() {
+		String[] options = {"2", "3", "4", "5", "6", "7", "8"};
+		int selection = JOptionPane.showOptionDialog(null, "Choose number of players", "player number selection", 0, 3, null, options, options[0]);
+		int selectionVal = Integer.valueOf(options[selection]);
+		return selectionVal;
+	}
 }
