@@ -90,6 +90,16 @@ public class Turn {
 	public void incrementPosition() {
 		currentPlayer.location = currentPlayer.location + rollNum;
 	}
+	
+	public void collectGo() {
+		currentPlayer.changeWallet(200);
+	}
+	
+	public static void buy() {
+		Property prop = (Property) Game.getArrSpace()[currentPlayer.getLocation()];
+		prop.setIsOwned(true);
+		currentPlayer.changeWallet(-1 * prop.getCostProperty());
+	}
 }
 	public void remove(Player bankruptPlayer) {
 	//gives builings and properties back to the bank and gives the player who made the other bankrupt gets all available money.
