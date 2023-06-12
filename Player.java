@@ -7,8 +7,9 @@ public class Player {
 	int playerNumber;
 	Boolean inJail ;
 	int timeInJail;
-
-	Property myProperties[] = new Property[22];
+	int PROPERTIESINGAME=28;
+	Property myProperties[] = new Property[28];
+	
 public Player(String playersPiece, int turnOrder) {
 	piece = playersPiece;
 	playerNumber = turnOrder;
