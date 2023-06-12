@@ -1,9 +1,8 @@
 public class CornerSpace extends Space {
 	int freeParkingMoney;
-	String nameOfSpace;
 	
-	public CornerSpace(String name) {
-		nameOfSpace = name;
+	public CornerSpace(int localLocation, String nameSpace) {
+		super(localLocation, nameSpace);
 		freeParkingMoney = 500;
 	}
 	
