@@ -15,14 +15,15 @@ public class Property extends Space {
 	int costOfBuilding;
 	Player owner;
 	
+	//these are the constructors for this class
 	public Property(int localLocation, String nameSpace) {
-		super(localLocation, nameSpace);
+		super(localLocation, nameSpace); //this is becuase this extends space
 		costProperty = 0;
 		numHouses = 0;
 		numHotels = 0;
 		isOwned = false;
 		rent = 0;
-		isMortgaged = false;
+		isMortgaged = false; //when you first buy a house in this game it is not mortgaged
 		colorSet = "";
 		propertyOneHouse = 0;
 		propertyTwoHouses = 0;
@@ -35,7 +36,7 @@ public class Property extends Space {
 		super(localLocation, nameSpace);
 		costProperty = varCostProperty;
 		numHouses = 0;
-		numHotels = 0;
+		numHotels = 0; // these are used byPG when he creates the properties
 		isOwned = false;
 		rent = varRent;
 		isMortgaged = false;
@@ -80,11 +81,11 @@ public class Property extends Space {
 	}
 	
 	public int getNumHouses() {
-		return numHouses;
+		return numHouses; //returns the number of houses
 	}
 	
 	public int getNumHotels() {
-		return numHotels;
+		return numHotels; //returns the number of hotels which most liley will either b o or 1
 	}
 	
 	public int getBuildingCost() {
