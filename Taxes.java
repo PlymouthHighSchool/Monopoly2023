@@ -1,5 +1,3 @@
-package Monopoly;
-
 public class Taxes extends Space {
 	int payTax; //amount of tax that has to paid when landed on the space
 	
