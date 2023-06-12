@@ -101,6 +101,14 @@ public class Turn {
 		currentPlayer.changeWallet(-1 * prop.getCostProperty());
 	}
 }
+
+	public static void sell(Player buyer, Property soldItem, int price) {
+		buyer.changeWallet((price*-1));
+		soldItem.setOwner(buyer);
+		soldItem.getIsOwnedBy().changeWallet(price);
+		soldItem.setIsOwned(true);
+	}
+
 	public void remove(Player bankruptPlayer) {
 	//gives builings and properties back to the bank and gives the player who made the other bankrupt gets all available money.
 	
@@ -118,5 +126,5 @@ public class Turn {
 
 		currentPlayer.location = currentPlayer.location + rollNum1 + rollNum2;
 	}//adds the number rolled to the player position
-
+ main
 }
