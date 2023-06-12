@@ -92,5 +92,10 @@ private static int mortgage(Property theProperty) {
 		currentPlayer.location = currentPlayer.location + rollNum;
 	}
 }
-	
+	public static void sell(Player buyer, Property soldItem, int price) {
+		buyer.changeWallet((price*-1));
+		soldItem.setOwner(buyer);
+		soldItem.getIsOwnedBy().changeWallet(price);
+		soldItem.setIsOwned(true);
+	}
 }
