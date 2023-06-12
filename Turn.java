@@ -1,5 +1,3 @@
-package Monopoly;
-
 public class Turn {
 	static int doubleCount, rollNum1, rollNum2;
 	Dice[] dice = new Dice[2];
