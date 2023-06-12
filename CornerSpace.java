@@ -1,5 +1,3 @@
-package Monopoly;
-
 public class CornerSpace extends Space {
 	int freeParkingMoney;
 	
