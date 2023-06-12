@@ -1,5 +1,3 @@
-package Monopoly;
-
 public class Railroads extends Property {
 	String railroadName;
 	static int railroadIndex = 0;
