@@ -1,5 +1,3 @@
-package Monopoly;
-
 public class Buildings {
 	int costOfBuilding;
 	int totalBuildingLimit;
