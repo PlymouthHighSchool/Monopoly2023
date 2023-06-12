@@ -15,9 +15,9 @@ public Player(String playersPiece, int turnOrder) {
 	playerNumber = turnOrder;
 }
 
-	public int numOfHotels() {
-		int hotelAmount = 0;
-		for(int count = 0; count < 23; count++ ) {
+	public int numOfHotels() { //this finds out how many hotels the player has
+		int hotelAmount = 0; //how many hotels they own
+		for(int count = 0; count < 23; count++ ) { //this is simailer to numOfHouses where it's a for lopp that adds to hotelAmount each time there is a hotel on a space
 			if (myProperties[count] != null) {
 				hotelAmount += (myProperties[count].getNumHotels());
 			}
@@ -33,9 +33,9 @@ public Player(String playersPiece, int turnOrder) {
 		numOfJailCards = jailCardsNumber;
 	}
 	
-	public int numOfHouses() {
-		int houseAmount = 0;
-		for(int count = 0; count < 23; count++ ) {
+	public int numOfHouses() { //this finds out how many houses the player has 
+		int houseAmount = 0; //how many houses they own
+		for(int count = 0; count < 23; count++ ) { //this is a for loop that goes through all of their props and if they aren't null the amount of houses is added
 			if (myProperties[count] != null) {
 				houseAmount+= (myProperties[count].getNumHouses());
 			}
@@ -51,9 +51,9 @@ public Player(String playersPiece, int turnOrder) {
 	public void changeLocation(int newLocation) {
 		location = newLocation;
 	}
-	public int calcTax(int totalWorth) {
+	public int calcTax(int totalWorth) { //this takes 10 percent away from the players total worth
 		totalWorth = (int) (totalWorth * .9);
-		return totalWorth;
+		return totalWorth; // returns their new taxed networth
 	}
 
 
