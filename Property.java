@@ -1,5 +1,3 @@
-package Monopoly;
-
 public class Property extends Space {
 	int costProperty;
 	int numHouses;
