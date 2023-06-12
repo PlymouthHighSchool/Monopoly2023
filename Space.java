@@ -1,5 +1,3 @@
-package Monopoly;
-
 public class Space {
 	String nameOfSpace; 
 	int location;
