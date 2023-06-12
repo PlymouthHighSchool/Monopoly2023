@@ -91,6 +91,14 @@ private static int mortgage(Property theProperty) {
 	public void incrementPosition() {
 		currentPlayer.location = currentPlayer.location + rollNum;
 	}
+	
+	public int collectGo() {
+		return 200;
+	}
+	
+	public void buy() {
+		Game.getArrSpace()[currentPlayer.getLocation()].setIsOwned(currentPlayer);
+	}
 }
 	
 }
