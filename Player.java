@@ -66,7 +66,41 @@ public Player(String playersPiece, int turnOrder) {
 		return inJail;
 	}
 
-	
+	public Boolean generateFunds(int financialGoal) {
+		int howMuchTheySold = wallet;// Assuming they will take the money they have as a building block for selling props.
+		boolean playerIsOut = false;
+		
+		while((howMuchTheySold != financialGoal) || playerIsOut) { // while they have not met their fincancial goal they must keep selling properites, and this while loops ask's them using props[] 
+				//mortaging props;
+			int numOfPropertiesOwned = 0;
+			String[] props = new String[PROPERTIESINGAME]; //array of the names of all the properties the player has
+			for(int propCounter = 0; propCounter <=PROPERTIESINGAME; propCounter++) {
+					if(myProperties[propCounter] != null) { // checks for if there is a prop there
+						props[numOfPropertiesOwned] = myProperties[propCounter].getName(); // i made this method
+						numOfPropertiesOwned++;
+			}	
+		} 
+		int num = Interface.createOptionPane(props,"would you like to sell any of these properties:", "you NEED money"); //not yet in interface 6/8 11;21
+		myProperties[num].isMortgaged = true; 
+		int whatItCost = myProperties[num].getCostProperty() /2;
+		howMuchTheySold += whatItCost;
+		changeWallet(whatItCost);
+		
+				//checking if they finally have enough to play
+				
+				if(howMuchTheySold >= financialGoal) {
+					playerIsOut = false;
+			}
+			else {
+				   //takes them away since they will not be able to come up with necasasry capital
+				Turn.remove(Turn.getPlayerInfo()); // PG is doing this as of 6/6
+				playerIsOut = true;
+			}
+			
+			}
+		return playerIsOut;
+			
+	 }
 	public void changeWallet(int money) {
 	 if (wallet+money>0) {
 		wallet=wallet+money; 
