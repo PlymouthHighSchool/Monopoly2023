@@ -1,7 +1,7 @@
 public class Space {
 	String nameOfSpace; 
 	int location;
-	
+	Player owner = new Player();
 	public Space(int localLocation, String nameSpace) {
 		nameOfSpace = nameSpace;
 		location = localLocation;
@@ -17,5 +17,11 @@ public class Space {
 	
 	public String getSpaceName() {
 		return nameOfSpace;
+	}
+		public void setOwner(Player newOwner) {
+		owner = newOwner;
+	}
+	public Player getIsOwnedBy(){
+		return owner;
 	}
 }
