@@ -92,5 +92,18 @@ private static int mortgage(Property theProperty) {
 		currentPlayer.location = currentPlayer.location + rollNum;
 	}
 }
+	public void remove(Player bankruptPlayer) {
+	//gives builings and properties back to the bank and gives the player who made the other bankrupt gets all available money.
 	
+		int moneyOnHand = bankruptPlayer.getTotalWorth();
+		int	lastLocation = bankruptPlayer.getLocation();
+		Space finalPosition;
+		Player moneyReciver;
+		Player[] playerArray =  theGame.getPlayerArray();
+		Object[] spaceArray =theGame.getArrSpace();
+		finalPosition = (Space) spaceArray[lastLocation];
+		moneyReciver = finalPosition.getIsOwnedBy();
+		moneyReciver.changeWallet(moneyOnHand);
+		playerArray[bankruptPlayer.getPlayerNumber()] = null;
+	}
 }
