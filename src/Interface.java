@@ -491,7 +491,9 @@ public class Interface {
 		rollClick.setBounds(1250,0,100,25);
 		rollClick.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-					//the method of the button goes here ASK NORMAN IF U DONT UNDERSTAND!!!!!!!!!
+				Game theGame = new Game();
+				Turn.doTurn(Turn.currentPlayer, theGame);
+				rollField.setText(String.valueOf(Integer.valueOf(Turn.dice[0].toString()) + Integer.valueOf(Turn.dice[1].toString())));
 			}
 		});
 		frame.add(rollClick);
@@ -500,7 +502,7 @@ public class Interface {
 		endTurnClick.setBounds(1400,0,100,25);
 		endTurnClick.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-					//the method of the button goes here ASK NORMAN IF U DONT UNDERSTAND!!!!!!!!!
+				Turn.endTurn();
 			}
 		});
 		frame.add(endTurnClick);

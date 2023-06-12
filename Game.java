@@ -59,8 +59,8 @@ public void setSpaces(){
 	return arrSpaces;
 }
 
-public int getPlayerNumber() {
-	return playerNumber;
+public int getNumOfPlayers() {
+	return numOfPlayers;
 }
 	
 public Player[] getPlayerArray() {
